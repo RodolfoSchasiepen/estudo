@@ -1,0 +1,37 @@
+def play():
+      #cabecario
+      print("**************************")
+      print("Bem vindo ao jogo de Forca")
+      print("**************************")
+
+      #condicao do jogo
+      secret_word = "banana"
+      hang = False
+      correct = False
+
+
+
+      #loop
+      while(not hang and not correct):
+
+
+          #normalizacao e input do jogador
+          guess = input("Qual a letra? ")
+          guess = guess.strip()
+          index = 0
+
+          #indexacao e posicao da letra
+          for letter in secret_word:
+              if (guess.upper() == letter.upper()):
+                 print("encontrei a letra {} na posicao {}".format(letter, index))
+              index = index + 1
+          print("Jogando...")
+
+
+
+      print("fim do jogo!")
+
+
+
+if(__name__ == "__main__"):
+    play()
